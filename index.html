@@ -16,16 +16,18 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 2rem;
-      text-align: center;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem; /* reduce padding */
+  text-align: center;
+  height: auto; /* allow content height */
+  overflow: auto; /* allow scrolling if needed */
     }
     .title {
       color: white;
