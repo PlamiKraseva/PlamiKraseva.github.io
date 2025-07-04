@@ -133,6 +133,10 @@
         width: 100%;
       }
     }
+     }
+    .pulse {
+      animation: pulse 1s ease;
+    }
     }
     @keyframes pulse {
       0% { transform: scale(1); }
@@ -164,7 +168,7 @@
    window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('plamena-banner').classList.add('enlarge');
-      }, 1000);
+      }, 2000);
 
       const buttonCount = 6;
       let delay = 0;
@@ -172,10 +176,9 @@
       for (let i = 1; i <= buttonCount; i++) {
         const btn = document.getElementById(`btn${i}`);
         setTimeout(() => {
-          btn.style.animation = 'pulse 1s ease';
-          btn.style.animationFillMode = 'forwards';
+          btn.classList.add('pulse');
           setTimeout(() => {
-            btn.style.animation = '';
+            btn.classList.remove('pulse');
           }, 1000);
         }, delay);
         delay += 1200; // Delay between buttons
