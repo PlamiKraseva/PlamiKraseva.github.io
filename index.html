@@ -69,13 +69,13 @@
       height: 100%;
     }
     .left-img img {
-      width: 120%;
+      width: 100%;
       height: auto;
       border-radius: 1rem;
-      transition: transform 2s ease;
+      transition: transform 1.5s ease;
     }
     .left-img img.enlarge {
-      transform: scale(1.15);
+      transform: scale(1.17);
     }
     .right-links {
       flex: 1;
@@ -165,7 +165,7 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('plamena-banner').classList.add('enlarge');
-      }, 2000);
+      }, 1000);
 
       const buttonCount = 6;
       let delay = 0;
@@ -176,7 +176,7 @@
           btn.classList.add('pulse');
           setTimeout(() => {
             btn.classList.remove('pulse');
-          }, 1000);
+          }, 2000);
         }, delay);
         delay += 1200;
       }
