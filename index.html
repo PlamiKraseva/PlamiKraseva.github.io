@@ -168,19 +168,21 @@
         document.getElementById('plamena-banner').classList.add('enlarge');
       }, 1000);
 
-      const buttonCount = 6;
-      let delay = 0;
+      setTimeout(() => {
+    const buttonCount = 6;
+    let delay = 0;
 
-      for (let i = 1; i <= buttonCount; i++) {
-        const btn = document.getElementById(`btn${i}`);
+    for (let i = 1; i <= buttonCount; i++) {
+      const btn = document.getElementById(`btn${i}`);
+      setTimeout(() => {
+        btn.classList.add('pulse');
         setTimeout(() => {
-          btn.classList.add('pulse');
-          setTimeout(() => {
-            btn.classList.remove('pulse');
-          }, 2500);
-        }, delay);
-        delay += 1200; // Delay between buttons
-      }
+          btn.classList.remove('pulse');
+        }, 1000);
+      }, delay);
+      delay += 1200; // Time between each button
+    }
+  }, 2000);
     });
   </script>
 </body>
